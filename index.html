@@ -1,44 +1,13 @@
 <!DOCTYPE>
 <html>
 	<head>
-	<title>研究生信息</title>
-	<style type="text/css">
-	
-	.box{width:200px;height:200px;border:1px solid red;font-size:20px;color:red;}
-	.box1{width:200px;height:200px;border:1px solid blue;}
-	header{background-image:linear-gradient(#f7acbc,#b2d235)};
-	canvas{border:1px solid blue;}
-	</style>
+	<meta charset="utf-8">
+	<title>杨建个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" >
 	</head>
 	<body>
-		<header><h1>头部</h1></header>
-		<canvas id='mycanvas' width="200" height="200">画布</canvas>
-		
-		<p><strong>内容</strong></p>
-		<div id='fox' style="width:200px;height:200px;border:1px solid red;text-align:center;color:pink;">内容</div>
-		<div class='box'>BOX盒子</div>
-		<button  id='button'>点击变化内容块的大小</button>
-		<div class='box1'>BOX盒子2</div>
-	<script>
-		var button=document.getElementById('button');
-		button.addEventListener('mouseover',change,false);
-		function change(){
-		var fox=parseInt(document.getElementById('fox').style.width);
-		
-			function ff(){
-			document.getElementById('fox').style.width=(fox++)+'px';
-			console.log(fox);
-			if(fox==400){
-			clearInterval(xx);
-			}
-		}
-		var xx=setInterval(ff,10);
-		}
-		var c=document.getElementById('mycanvas');
-		var ctx=c.getContext("2d");
-		ctx.fillStyle='#FF0000';
-		ctx.fillRect(0,0,150,75);
-		
-	</script>
+		<header id='header'>头部</header>
+		<aside id='aside'>中间内容块</aside>
+		<footer id='footer'>尾部</footer>
 	</body>
 </html>
