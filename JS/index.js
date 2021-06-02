@@ -1,4 +1,6 @@
 $(document).ready(function(){
-	alert('hello word!');
-
+	$('button').click(function(){
+	$('#nav').fadeToggle(1000);
+	});
+	
 });
