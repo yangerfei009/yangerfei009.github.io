@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('button').click(function(){
 	
-	$('#div').load('wendang.txt');
+	$('#div').load('JS/wendang.txt');
 	});
 	
 	
