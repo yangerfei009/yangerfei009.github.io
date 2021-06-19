@@ -1,39 +1,32 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
-    <head>
-        <title>个人主页</title>
-        <style type='text/css'>
-        *{padding: 0;margin: 0;}
-        div{color:red;border-radius: 20px;;}
-        ul{color:pink;}
-        li{width: 90px;height: 30px;border: 1px solid fuchsia;}
-        #box2{color: blue;width: 200px;height: 200px;border: 1px solid red;border-radius: 30px;}
-        </style>
-    </head>
-    <body>
-        <canvas id="mycanvas" width="200" height="100">画图</canvas>
-        <div id="box">
-            <span>个人网站</span>
-        </div>
-        <div id="box2">
-            <strong>强壮</strong>
-        </div>
-        <div id="box3">
-            <ol>
-                <li>菜单1</li>
-                <li>菜单2</li>
-                <li>菜单3</li>
-                <li>菜单4</li>
-                <li>菜单5</li>
-                <li>菜单6</li>
-            </ol>
-        </div>
-    </body>
-    <script>
-        console.log('hello word');
-        var c=document.getElementById('mycanvas');
-        var ctx=c.getContext('2d');
-        ctx.fillStyle='#ff0212';
-        ctx.fillRect(10,0,150,75);
-    </script>
+	<head>
+	<meta charset="utf-8">
+	<title>杨建个人博客</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" >
+	<script src='JQ/jquery-3.5.1.min.js'></script>
+	<script src='JS/index.js'></script>
+	</head>
+	<body>
+		<header id='header'>
+			<nav id='nav'>
+				<ul>
+				<li>菜单1</li>
+				<li>菜单2</li>
+				<li>菜单3</li>
+				<li>菜单4</li>
+				<li>菜单5</li>
+				<li>菜单6</li>
+				</ul>
+			</nav>	
+		</header>
+		<aside id='aside'>中间内容块
+			
+		</aside>
+		<button class='button'>按钮</button>
+		<div id='div'>内容</div>
+		<footer id='footer'>尾部</footer>
+		
+		
+	</body>
 </html>
