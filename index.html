@@ -1,32 +1,237 @@
-<!DOCTYPE>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<title>杨建个人博客</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css" >
-	<script src='JQ/jquery-3.5.1.min.js'></script>
-	<script src='JS/index.js'></script>
-	</head>
-	<body>
-		<header id='header'>
-			<nav id='nav'>
-				<ul>
-				<li>菜单1</li>
-				<li>菜单2</li>
-				<li>菜单3</li>
-				<li>菜单4</li>
-				<li>菜单5</li>
-				<li>菜单6</li>
-				</ul>
-			</nav>	
-		</header>
-		<aside id='aside'>中间内容块
-			
-		</aside>
-		<button class='button'>按钮</button>
-		<div id='div'>内容</div>
-		<footer id='footer'>尾部</footer>
-		
-		
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨建个人移动端</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <style> 
+    *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            font-size: 1px;
+            background-color:#94d6da;
+            perspective: 800rem;
+        }
+        body{
+            width: 98%;
+            margin: 0 auto;
+        }
+        #header{
+            width: 95%;
+            height: 50rem;
+            display: flex;
+            margin: 0 auto;
+            justify-content:space-between;
+            align-items: center;
+            border-radius: 20rem;
+            box-shadow: 5rem 5rem 5rem gray;
+            background-color: paleturquoise;
+            margin-top: 10rem;
+        }
+        .left{
+            font-size: 20rem;
+            margin-left:20rem;
+            position: relative;
+        }
+        .right{
+            font-size: 20rem;
+            margin-right: 20rem;
+        }
+        #nav{
+            width: 98%;
+            margin: 0 auto;
+            height: 40rem;
+            border-radius: 10rem;
+            box-shadow: 1rem 1rem 15rem gray;
+            margin-top: 15rem;
+        }
+        #nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        #nav ul li a{
+            text-decoration: none;
+            display: block;
+            color: black;
+            font-size: 14rem;
+            width:70rem;
+            height:40rem;
+            text-align: center;
+            line-height: 40rem;
+        }
+        #nav ul li a:hover{
+            background-color: black;
+            border-radius: 10rem;
+            color:white;
+        }
+        #animation{
+            
+            width: 200rem;
+            margin: 0 auto;
+            height: 200rem;
+            margin-top: 50rem;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: ball 10s infinite;
+            
+        }
+        #animation div{
+            width: 200rem;
+            height: 200rem;
+            line-height: 200rem;
+            position: absolute;
+            text-align: center;
+            font-size: 40rem;
+            opacity: 0.3;
+        }
+        #animation div img{
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+        }
+        .box1{
+            transform:rotateY(90deg) translateZ(100rem);
+            background-color:pink;
+        }
+        .box2{
+            transform:rotateY(-90deg) translateZ(100rem);
+            background-color: red;
+        }
+        .box3{
+            transform:rotateX(-90deg) translateZ(100rem);
+            background-color: seagreen;
+        }
+        .box4{
+            transform:rotateX(90deg) translateZ(100rem);
+            background-color: tomato;
+        }
+        .box5{
+            transform:rotateX(180deg) translateZ(100rem);
+            background-color: purple;
+        }
+        .box6{
+            transform:rotateX(0deg) translateZ(100rem);
+            background-color: yellow;
+        }
+        @keyframes ball{
+         form{
+             transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0);
+         }
+         to{
+             transform:rotateX(1turn) rotateY(1turn) rotateZ(1turn) translateZ(150rem);
+         }
+     }
+     #carousel{
+         width: 100%;
+         height: 300rem;
+         overflow: hidden;
+         position: relative;
+         opacity: 0.3;
+         border-radius: 50%;
+         
+         
+     }
+     #carousel #mian{
+         position: absolute;
+         width: 500%;
+         height: 300rem;
+     }
+     #carousel img{
+         display: block;
+         width: 20%;
+         height: 100%;
+         float: left;  
+     }
+     #carousel:hover{
+         box-shadow: 10rem 10rem 10rem gray;
+     }
+    #footer{
+        width: 100%;
+        height: 20rem;
+        
+    }
+    #footer span:nth-child(1){
+        float: left;
+        padding-left: 10rem;
+        
+    }
+    #footer span:nth-child(2){
+        float:right;
+    }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="left fa fa-phone"><span class="span" style="display: none;">18626158742</span></div>
+        <div class="content"><h3>欢迎光临我的移动端小网站</h3></div>
+        <div class="right fa fa-tv"></div>
+    </header>
+    <nav id="nav">
+        <ul>
+            <li><a href="javascript:;">主页</a></li>
+            <li><a href="#skill">技能</a></li>
+            <li><a href="javascript:;">介绍</a></li>
+            <li><a href="javascript:;">职业</a></li>
+        </ul>
+    </nav>
+    <div id="animation">
+        <div class="box1">诡秘之主</div>
+        <div class="box2">一世之尊</div>
+        <div class="box3">三体</div>
+        <div class="box4">镜子</div>
+        <div class="box5">流浪地球</div>
+        <div class="box6">海底两万里</div>
+    </div>
+    <div id="carousel">
+        <div id='mian' style="left: 0;">
+        <img src="image/1.jpg">
+        <img src="image/2.jpg">
+        <img src="image/3.jpg">
+        <img src="image/4.jpg">
+        <img src="image/5.jpg">
+        </div>
+    </div>
+    
+    <footer id="footer">
+        <div>
+            <span>欢迎来撩</span>
+            <span>QQ:992216121</span>
+        </div>
+    </footer>
+    <script>
+       let mian=document.getElementById('mian');
+       function next_pic(){
+            var newleft=parseInt(mian.style.left)+(-100);
+            
+            if(newleft==-500){
+                newleft=0;
+            }
+            mian.style.left=newleft+'%';
+        }
+        setInterval(next_pic,2000);
+       let left=document.querySelector('.left');
+       let flag=true;
+       let span=document.querySelector('span');
+       left.addEventListener('click',function(event){
+           flag=!flag;
+           flag==true?hidden():show();
+       })
+       function show(){
+           span.style.display='block';
+           span.style.position='absolute'
+           span.style.top='-12rem';
+           span.style.left='5rem';
+       }
+       function hidden(){
+           span.style.display='none';
+           
+       }
+       
+    </script>
+</body>
 </html>
